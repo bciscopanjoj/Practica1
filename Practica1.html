@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head >
+        <title>Identificador.Cisco.Gt</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="Practica1.css">
+    </head>
+    <body>
+      <script>
+        var arr = [];
+      </script>
+        <header>
+                <h1>"IDENTIFICADOR"</h1>
+
+        </header>
+      <section>
+        <article>
+            <h2>El siguiente Identificador reconocerá símbolos,numeros,letras o ID´s</h2>
+           </article>
+
+           <form name="form" action="" method="get">
+               <input type="text" name="prod">
+           </form>
+           <button onclick="analizar()">ANALIZAR</button>
+
+    <div class="contenedor">
+            <ul id="historial">
+                <h2>Historial</h2>
+
+                </ul>
+    </div>
+
+
+
+
+       <div class="contenedor">
+           <ul>
+               <div id="palabra"></div>
+                <script>
+                  function mostrarHistorial(text){
+                    var texto;
+                    arr.push(text);
+                      for (var i = arr.length-1; i >= 0; i--) {
+                        texto+= "<h5>"+arr[i]+ "<h5>";
+                      }
+                      document.getElementById("palabra").innerHTML =texto;
+                  }
+                </script>
+           </ul>
+       </div>
+       <nav>
+           <ul>
+               <li><a href="https://twitter.com/Brayan89206791">@Cisco</a></li>
+               <li><a href=></a>201830419BrayanPanjoj</li>
+           </ul>
+       </nav>
+       <a href="#">
+            <img src="./FinesseGrande.png" alt="">
+                    </a>
+    
+    <script type="text/javascript" src="./practica1.js"></script>
+
+
+
+
+      </section>
+
+    </body>
+</html>
+
+<script type="text/javascript">
+
+  function analizar(){
+    var text = null;
+    text = document.getElementsByName("prod")[0].value;
+
+      if(text == ""){
+          alert("Por favor ingrese texto en la entrada");
+      }else{
+        if(esNumero(text)){
+            alert("son numeros");
+        }else if(esSimbolo(text)){
+            alert("son simbolos");
+        }else if(esId(text)){
+            alert("Es un id");
+        }else{
+            alert(" Error");
+        }
+        mostrarHistorial(text);
+      }
+  };
+  function esNumero(text){
+    var result=false;
+    for(i=0; i<text.length; i++){
+      var num1=text[i];
+      if(!isNaN(num1)){
+          result=true;
+      }else{
+          result=false;
+          break;
+      }
+    }
+    return result;
+  };
+  function esSimbolo(text){
+    var result=false;
+    for(i=0; i<text.length; i++){
+      var num1=text[i];
+      if(num1=="$"||num1=="%"||num1=="#"){
+          result=true;
+      }else{
+          result=false;
+          break;
+      }
+    }
+    return result;
+  };
+  function esId(text){
+    var result=false;
+    var letras="abcdefghyjklmnñopqrstuvwxyz";
+    var letrasNum="abcdefghyjklmnñopqrstuvwxyz0123456789";
+    var texto = text.toLowerCase();
+    if (letras.indexOf(texto.charAt(0),0)!=-1){
+       for(i=1; i<texto.length; i++){
+         if (letrasNum.indexOf(texto.charAt(i),0)!=-1){
+            result = true;
+         }else{
+            result = false;
+            break;
+         }
+       }
+    }else{
+      result= false;
+    }
+      return result;
+  };
+</script>

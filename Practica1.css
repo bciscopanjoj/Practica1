@@ -1,0 +1,68 @@
+h1{
+    margin-left: 30%;
+    width: 1000;
+    font-size: 45px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: rgb(251, 255, 42);
+
+}
+body{
+    background-color: rgb(0, 0, 0);
+}
+p{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: rgb(0, 238, 255);
+}
+li{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: rgb(0, 238, 255);
+}
+h2{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: rgb(0, 238, 255);
+
+}
+h3{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: rgb(0, 238, 255);
+}
+h4{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: rgb(0, 238, 255);
+}
+h5{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: rgb(0, 238, 255);
+}
+h6{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: rgb(0, 238, 255);
+
+}
+.contenedor{
+    width: 146;
+    display: block;
+    margin: auto;
+    border: 1px solid #f5eeee;
+}
+.ingresar2{
+    width: 80;
+    display: block;
+    margin: auto;
+    border: 1px solid #a50e0e;
+}
